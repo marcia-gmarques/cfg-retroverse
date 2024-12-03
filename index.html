@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <script src="/script.js"></script> -->
-     <link rel="stylesheet" type="text/css" href="/stylesheet.css">
-    <title>Retroverse</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <title>Virtual Pet</title>
 </head>
+
 <body>
 
     <div id="intro">
@@ -14,17 +15,33 @@
         <input type="text" id="name" placeholder="Choose your pet's name">
         <button type="submit" id="submit_button">Start Game</button>
     </div>
-
+        
     <div id="dog">
-        <img src="/virtual_pet_character/dog_normal.png">
+        <img src="PET_ASSETS/dog_normal.png" id="doggy" style="max-height: 350px; padding: 30px;">
     </div>
-    <div>
-        <button type="submit" id="feed_button">Feed</button>
-        <button type="submit" id="pet_button">Pet</button>
-        <button type="submit" id="treat_button">Little Treat</button>
-        <button type="submit" id="sleep_button">Sleep</button>
+
+
+    <div id="buttons">
+        <button onclick="feeddog()" id="feed_button">Feed</button>
+        <button onclick="petdog()" id="pet_button">Pet</button>
+        <button onclick="treatdog()" id="treat_button">Little Treat</button>
+        <button onclick="sleepdog() " id="sleep_button">Sleep</button>
+        <button onclick="leavealonedog() " id="leavealone_button">Leave Alone</button>
+        <button onclick="maddog() " id="mad_button">Mad</button>
+        <br>
+
+        <p id="feedstats" style="text-align: center;"></p>
+        <h4 id="currentfeedstats">Current Levels  </h4>
+         <p id="happiness"></p>
+         <p id="health"></p>
     </div>
- 
-    <script src="/script.js"></script>
+
+
+    <div id="GameOver"> </div>
+   
+
+
+
+        <script src="/script.js"></script>
 </body>
 </html>

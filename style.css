@@ -1,0 +1,47 @@
+body{
+    background-color: black;
+    color: bisque;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+#intro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#buttons{
+    text-align: center;
+    justify-content: center;
+}
+
+#feed_button,#pet_button,#treat_button,
+#sleep_button,#leavealone_button,#mad_button,#submit_button{
+    background-color: bisque;
+    border-radius: 16px;
+    padding: 0.7em;
+    margin: 0 2px 0 2px;
+    font-size: 0.9em;
+    font-weight: 600;
+}
+#feed_button:hover,#pet_button:hover,#treat_button:hover,
+#sleep_button:hover,#leavealone_button:hover,#mad_button:hover,#submit_button:hover {
+    cursor: pointer;
+    background-color: burlywood;
+    transform: scale(1.1);
+}
+
+#name{
+background-color: bisque;
+border-radius: 16px;
+padding: 0.7em;
+color: black;
+margin: 6px;
+}
