@@ -7,7 +7,7 @@ const all_buttons = document.getElementById("buttons");
 let gameover = document.getElementById("GameOver");
 
 gameover.style.display = "none";
-
+askforname();
 
 //adds on click listener event to do something when button is clicked
 submitButton.addEventListener("click", function(){
@@ -25,17 +25,24 @@ submitButton.addEventListener("click", function(){
         // Telling user to know which buttons affect pet's health
         let stats = document.getElementById("feedstats");
         stats.textContent="Take care of "+ name + " - loneliness or madness can affect their well-being";
+
+        // Showing all content on screen after getting name
+        dog.style.display = "block";
+        all_buttons.style.display = "block";
+        gameover.style.display = "block";
+
     }
 
 });
 
 
 // Current Levels
-let number = 50;
+let number = 100;
+let number2 = 50;
 let happy= document.getElementById("happiness");
 happy.textContent = "Happiness: " + number ;
 let healthy = document.getElementById("health");
-healthy.textContent = "Health: " + number ;
+healthy.textContent = "Health: " + number2 ;
 
 
 
@@ -72,60 +79,66 @@ function sleepdog(){
     let doggymood = document.getElementById("doggy");
     doggymood.src = sleeping_dog;
     number += 10;
+    number2 += 5;
     happy.textContent = "Happiness: " + number ;
-    healthy.textContent = "Health: " + number ;
-    checkgameover(number);
+    healthy.textContent = "Health: " + number2 ;
+    checkgameover(number2);
 }
 
 function feeddog(){
     let doggymood  = document.getElementById("doggy");
     doggymood.src = happy_dog;
     number += 10;
+    number2 += 5;
     happy.textContent = "Happiness: " + number ;
-    healthy.textContent = "Health: " + number ;
-    checkgameover(number);
+    healthy.textContent = "Health: " + number2 ;
+    checkgameover(number2);
     }
 
 function petdog (){
      let doggymood = document.getElementById("doggy");
     doggymood.src = normal_dog;
     number += 10;
+    number2 += 5;
     happy.textContent = "Happiness: " + number ;
-    healthy.textContent = "Health: " + number ;
-    checkgameover(number);
+    healthy.textContent = "Health: " + number2 ;
+    checkgameover(number2);
      }
 
 function treatdog (){
      let doggymood = document.getElementById("doggy");
       doggymood.src = surprised_dog;
       number += 10;
+      number2 += 5;
     happy.textContent = "Happiness: " + number ;
-    healthy.textContent = "Health: " + number ;
-    checkgameover(number);
+    healthy.textContent = "Health: " + number2 ;
+    checkgameover(number2);
       }
 
 function leavealonedog (){
      let doggymood = document.getElementById("doggy");
      doggymood.src = sad_dog;
      number -= 10;
+     number2 -= 5;
     happy.textContent = "Happiness: " + number ;
-    healthy.textContent = "Health: " + number ;
-    checkgameover(number);
+    healthy.textContent = "Health: " + number2 ;
+    checkgameover(number2);
      }
 
 function maddog (){
      let doggymood = document.getElementById("doggy");
     doggymood.src = mad_dog ;
     number -= 10;
+    number2 -=5;
     happy.textContent = "Happiness: " + number ;
-    healthy.textContent = "Health: " + number ;
-    checkgameover(number);
+    healthy.textContent = "Health: " + number2 ;
+    checkgameover(number2);
      }
    
 
 // GAME OVER FUNCTION
 function checkgameover(){
-if ( number <= 0 ){
+if ( number2 <= 0 ){
 
 intro.style.display = "none";
 dog.style.display = "none";
@@ -136,3 +149,13 @@ gameover.style.display = "block";
 
 }
 }// end of function
+
+// HIDE ALL AND ASK FOR NAME FUNCTION
+function askforname(){
+
+intro.style.display = "block";
+dog.style.display = "none";
+all_buttons.style.display = "none";
+gameover.style.display = "none";
+
+}

@@ -45,3 +45,8 @@ padding: 0.7em;
 color: black;
 margin: 6px;
 }
+
+p{
+    text-align: center;
+    justify-content: center;
+}
